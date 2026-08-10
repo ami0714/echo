@@ -1,0 +1,215 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Roboto:wght@400;500;700&display=swap');
+
+/* Warna Utama Projek */
+:root {
+  --purple-primary: #5C4AD2;
+  --text-black: #000000;
+  --bg-gray: #F4F5F9;
+  --input-border: #5C4AD2;
+}
+
+.message{
+  padding: 30px;
+  border: 3px solid black;
+  border-radius: 30px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* 1. Layout Utama & SEO Semantik */
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-gray);
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* 2. Bahagian Kiri (Logo) */
+.auth-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-text {
+  font-family: 'Jua', sans-serif;
+  font-size: 3rem;
+  color: var(--text-black);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.logo-text {
+  font-family: 'Jua', sans-serif;
+  font-size: 5.5rem;
+  line-height: 1;
+  margin-top: -5px;
+}
+
+.text-purple {
+  color: var(--purple-primary);
+}
+
+.text-black {
+  color: var(--text-black);
+}
+
+/* 3. Bahagian Kanan (Kad Borang) */
+.auth-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.auth-card {
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  padding: 40px 30px 30px 30px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-title {
+  font-family: 'Jua', sans-serif;
+  font-size: 2.8rem;
+  color: var(--text-black);
+  margin: 0 0 30px 0;
+  line-height: 1;
+}
+
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+/* Input Fields */
+.form-group input {
+  width: 100%;
+  padding: 14px 20px;
+  border: 2px solid var(--input-border);
+  border-radius: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  background: transparent;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+  color: #888;
+  font-weight: 400;
+}
+
+.form-group input:focus {
+  border-color: #4A3ABF;
+  box-shadow: 0 0 0 3px rgba(92, 74, 210, 0.15);
+}
+
+/* Butang Submit */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--purple-primary);
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+  background-color: #4A3ABF;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Footer Link */
+.footer-text {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: var(--text-black);
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-link {
+  color: var(--purple-primary);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Tambah / ganti media query sedia ada */
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 15px;
+   overflow-y: hidden;
+  }
+  
+  .auth-left {
+    padding: 10px 0;
+  }
+  .welcome-text {
+    font-size: 1.8rem;
+  }
+  .logo-text {
+    font-size: 3.5rem;
+  }
+  .auth-card {
+    padding: 25px 20px;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  .form-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .form-group input {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+  .submit-btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+  .footer-text {
+    font-size: 0.85rem;
+    margin-top: 20px;
+  }
+}
