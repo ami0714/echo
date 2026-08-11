@@ -1,7 +1,7 @@
 /* --- 3. COMMENT SECTION (Kanan) --- */
 .comment-section {
 position: fixed;
-margin-left:150vh ;
+right: 0;
   flex: 0 0 320px;
   background: #FFFFFF;
   border-radius: 30px;
