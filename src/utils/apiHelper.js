@@ -4,6 +4,7 @@ const BASE_URL = import.meta.env.VITE_BASE_URL; // Laravel API URL
 function getHeaders() {
   const headers = {
     'Content-Type': 'application/json',
+    "ngrok-skip-browser-warning": "true"
   };
   const token = localStorage.getItem('token');
   if (token) {
